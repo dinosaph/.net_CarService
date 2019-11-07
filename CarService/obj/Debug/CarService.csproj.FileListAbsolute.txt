@@ -1,0 +1,12 @@
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\CarService.dll.config
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\CarService.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\CarService.pdb
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\EntityFramework.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\EntityFramework.xml
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\obj\Debug\CarService.csprojAssemblyReference.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\obj\Debug\CarService.csproj.CoreCompileInputs.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\obj\Debug\CarService.csproj.CopyComplete
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\obj\Debug\CarService.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarService\obj\Debug\CarService.pdb

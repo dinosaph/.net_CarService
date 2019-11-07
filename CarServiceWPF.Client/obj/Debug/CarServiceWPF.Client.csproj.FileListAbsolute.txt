@@ -1,0 +1,15 @@
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.csprojAssemblyReference.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\MainWindow.g.cs
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\App.g.cs
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client_MarkupCompile.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client_MarkupCompile.lref
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\bin\Debug\CarServiceWPF.Client.exe.config
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\bin\Debug\CarServiceWPF.Client.exe
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\bin\Debug\CarServiceWPF.Client.pdb
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\MainWindow.baml
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.g.resources
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.Properties.Resources.resources
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.csproj.GenerateResource.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.csproj.CoreCompileInputs.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.exe
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWPF.Client\obj\Debug\CarServiceWPF.Client.pdb

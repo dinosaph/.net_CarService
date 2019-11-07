@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Localitate" ColumnName="Localitate" />
+          <ScalarProperty Name="Judet" ColumnName="Judet" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Masini">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Auto)">
+        <MappingFragment StoreEntitySet="Masini">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumarAuto" ColumnName="NumarAuto" />
+          <ScalarProperty Name="SerieSasiu" ColumnName="SerieSasiu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sasiuri">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sasiu)">
+        <MappingFragment StoreEntitySet="Sasiuri">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodSasiu" ColumnName="CodSasiu" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mecanici">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Mecanic)">
+        <MappingFragment StoreEntitySet="Mecanici">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComandaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materiale">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Material)">
+        <MappingFragment StoreEntitySet="Materiale">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="Cantitate" ColumnName="Cantitate" />
+          <ScalarProperty Name="Pret" ColumnName="Pret" />
+          <ScalarProperty Name="DataAprovizionare" ColumnName="DataAprovizionare" />
+          <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComandaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imagini">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Imagine)">
+        <MappingFragment StoreEntitySet="Imagini">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titlu" ColumnName="Titlu" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operatii">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Operatie)">
+        <MappingFragment StoreEntitySet="Operatii">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="TimpExecutie" ColumnName="TimpExecutie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comenzi">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Comanda)">
+        <MappingFragment StoreEntitySet="Comenzi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StareComanda" ColumnName="StareComanda" />
+          <ScalarProperty Name="DataSystem" ColumnName="DataSystem" />
+          <ScalarProperty Name="DataProgramare" ColumnName="DataProgramare" />
+          <ScalarProperty Name="DataFinalizare" ColumnName="DataFinalizare" />
+          <ScalarProperty Name="KmBord" ColumnName="KmBord" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="ValoarePiese" ColumnName="ValoarePiese" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetaliiComenzi">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DetaliuComanda)">
+        <MappingFragment StoreEntitySet="DetaliiComenzi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ComandaId" ColumnName="ComandaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ClientAuto" TypeName="Model1.ClientAuto" StoreEntitySet="Masini">
+      <EndProperty Name="Client">
+        <ScalarProperty Name="Id" ColumnName="Client_Id" />
+      </EndProperty>
+      <EndProperty Name="Auto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ImagineDetaliuComanda" TypeName="Model1.ImagineDetaliuComanda" StoreEntitySet="Imagini">
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="Id" ColumnName="DetaliuComanda_Id" />
+      </EndProperty>
+      <EndProperty Name="Imagine">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AutoComanda" TypeName="Model1.AutoComanda" StoreEntitySet="Comenzi">
+      <EndProperty Name="Auto">
+        <ScalarProperty Name="Id" ColumnName="Auto_Id" />
+      </EndProperty>
+      <EndProperty Name="Comanda">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AutoSasiu" TypeName="Model1.AutoSasiu" StoreEntitySet="Masini">
+      <EndProperty Name="Sasiu">
+        <ScalarProperty Name="Id" ColumnName="Sasiu_Id" />
+      </EndProperty>
+      <EndProperty Name="Auto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetaliuComandaOperatie" TypeName="Model1.DetaliuComandaOperatie" StoreEntitySet="Operatii">
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="Id" ColumnName="DetaliuComanda_Id" />
+      </EndProperty>
+      <EndProperty Name="Operatie">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

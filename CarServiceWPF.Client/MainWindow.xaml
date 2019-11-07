@@ -1,0 +1,190 @@
+﻿<Window x:Class="CarServiceWPF.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarServiceWPF.Client"
+        mc:Ignorable="d"
+        Title="CarService" Height="826.459" Width="1528.404">
+    <Grid>
+        <TabControl x:Name="serviceTabs"  HorizontalAlignment="Left" Height="774" Margin="10,10,0,0" VerticalAlignment="Top" Width="1501" SelectionChanged="ServiceTabs_Selected">
+            <TabItem x:Name="ClientsTab" Header="Clienti">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="clientsGroupBox" HorizontalAlignment="Left" Height="678" Margin="34,30,0,0" VerticalAlignment="Top" Width="463">
+                        <StackPanel HorizontalAlignment="Left" Height="636" Margin="10,10,0,0" VerticalAlignment="Top" Width="422">
+                            <Label x:Name="Label" Content="Clienti"/>
+                            <ListBox x:Name="clientiListBox" Height="559" Margin="0,0,0.4,0" SelectionChanged="ClientiListBox_SelectedIndexChanged"/>
+                            <Button x:Name="newClientBtn" Content="Client nou" Height="33" Margin="0,0,0.4,0" Click="NewClientBtn_Click"/>
+                            <Button x:Name="deleteClientBtn" Content="Sterge" Margin="0,0,0.4,0" Height="41" Click="DeleteClientBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="clientDataGroupBox" HorizontalAlignment="Left" Height="523" Margin="534,30,0,0" VerticalAlignment="Top" Width="482">
+                        <StackPanel HorizontalAlignment="Left" Height="454" Margin="30,30,0,0" VerticalAlignment="Top" Width="407">
+                            <Label Content="Nume:" Target="{Binding ElementName=numeTxtBox}" />
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="numeTxtBox"/>
+                            <Label Content="Prenume:" Target="{Binding ElementName=prenumeTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="prenumeTxtBox"/>
+                            <Label Content="Adresa:" Target="{Binding ElementName=adresaTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="adresaTxtBox"/>
+                            <Label Content="Localitate:" Target="{Binding ElementName=locatieTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="locatieTxtBox"/>
+                            <Label Content="Judet:" Target="{Binding ElementName=judetTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="judetTxtBox"/>
+                            <Label Content="Telefon:" Target="{Binding ElementName=telefonTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="telefonTxtBox"/>
+                            <Label Content="Email:" Target="{Binding ElementName=emailTxtBox}"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="emailTxtBox"/>
+                            <Button x:Name="clientEditBtn" Content="Editeaza" Height="38" Margin="0,0,0.4,0" Click="ClientEditBtn_Click"/>
+                            <Button x:Name="saveClientBtn" Content="Salveaza" Height="35" Margin="0,0,0.4,0" Click="SaveClientBtn_Click"/>
+                            <Button x:Name="clientCancelBtn" Content="Anuleaza" Height="38" Margin="0,0,0.4,0" Click="ClientCancelBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="clientCarsGroupBox" HorizontalAlignment="Left" Height="335" Margin="1075,30,0,0" VerticalAlignment="Top" Width="393" Visibility="Visible">
+                        <StackPanel HorizontalAlignment="Left" Height="293" Margin="10,10,0,0" VerticalAlignment="Top" Width="360">
+                            <ListBox x:Name="clientMasiniPreviewListBox" Height="252" Margin="0,0,-0.4,0"/>
+                            <Button x:Name="carTabBtn" Content="Detalii" Height="39" Margin="0,0,-0.4,0" Click="CarTabBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="clientCommandsGroupBox" HorizontalAlignment="Left" Height="335" Margin="1075,373,0,0" VerticalAlignment="Top" Width="393" Visibility="Visible">
+                        <StackPanel HorizontalAlignment="Left" Height="293" Margin="10,10,0,0" VerticalAlignment="Top" Width="357">
+                            <ListBox x:Name="clientComenziPreviewListBox" Height="249" Margin="0,0,-0.4,0"/>
+                            <Button x:Name="commandsTabBtn" Content="Detalii" Height="39" Margin="0,0,-0.4,0" Click="CommandsTabBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="AutoTab" Header="Auto">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="carsGroupBox" HorizontalAlignment="Left" Height="676" Margin="35,31,0,0" VerticalAlignment="Top" Width="490">
+                        <StackPanel HorizontalAlignment="Left" Height="631" Margin="10,10,0,0" VerticalAlignment="Top" Width="452">
+                            <ListBox x:Name="masiniListBox" Height="538" Margin="0,0,-0.2,0" SelectionChanged="MasiniListBox_SelectedIndexChanged"/>
+                            <Button x:Name="newCarBtn" Content="Masina noua" Height="47" Margin="0,0,-0.2,0" Click="NewCarBtn_Click"/>
+                            <Button x:Name="deleteCarBtn" Content="Sterge" Height="47" Margin="0,0,-0.2,0" Click="DeleteCarBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="carCommandGroupBox" HorizontalAlignment="Left" Height="676" Margin="569,31,0,0" VerticalAlignment="Top" Width="436">
+                        <StackPanel HorizontalAlignment="Left" Height="636" Margin="10,10,0,0" VerticalAlignment="Top" Width="404">
+                            <ListBox x:Name="masinaComenziListBox" Height="541" Margin="0,0,0.4,0"/>
+                            <Button x:Name="carNewCommandBtn" Content="Comanda noua" Height="47" Margin="0,0,0.4,0" Click="CarNewCommandBtn_Click"/>
+                            <Button x:Name="carToCommandBtn" Content="Detalii" Height="47" Margin="0,0,0.4,0" Click="CarToCommandBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="carDataGroupBox" HorizontalAlignment="Left" Height="289" Margin="1010,31,0,0" VerticalAlignment="Top" Width="431">
+                        <StackPanel HorizontalAlignment="Left" Height="247" Margin="10,10,0,0" VerticalAlignment="Top" Width="392">
+                            <Label Content="Numar auto:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="numarAutoTxtBox"/>
+                            <Label Content="Serie sasiu:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="serieSasiuTxtBox"/>
+                            <Button x:Name="editCarBtn" Content="Editeaza" Height="47" Click="EditCarBtn_Click"/>
+                            <Button x:Name="saveCarBtn" Content="Salveaza" Height="49" Click="SaveCarBtn_Click"/>
+                            <Button x:Name="cancelCarBtn" Content="Anuleaza" Height="54" Click="CancelCarBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="sasiuDataGroupBox" HorizontalAlignment="Left" Height="173" Margin="1010,356,0,0" VerticalAlignment="Top" Width="431">
+                        <StackPanel HorizontalAlignment="Left" Height="128" Margin="10,10,0,0" VerticalAlignment="Top" Width="392">
+                            <Label Content="Cod sasiu:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="codSasiuTxtBox"/>
+                            <Label Content="Denumire sasiu:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="denumireSasiuTxtBox"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="CommandsTab" Header="Comenzi">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="commandsGroupBox" HorizontalAlignment="Left" Height="726" Margin="10,10,0,0" VerticalAlignment="Top" Width="548">
+                        <StackPanel HorizontalAlignment="Left" Height="681" Margin="10,10,0,0" VerticalAlignment="Top" Width="510">
+                            <ListBox x:Name="comenziListBox" Height="587" Margin="0,0,0.4,0" SelectionChanged="ComenziListBox_SelectedIndexChanged"/>
+                            <Button x:Name="newCommandBtn" Content="Comanda noua" Height="44" Margin="0,0,0.4,0" Click="NewCommandBtn_Click"/>
+                            <Button x:Name="deleteCommandBtn" Content="Sterge" Height="51" Margin="0,0,0.4,0" Click="DeleteCommandBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="commandDataGroupBox" HorizontalAlignment="Left" Height="478" Margin="584,10,0,0" VerticalAlignment="Top" Width="879">
+                        <StackPanel HorizontalAlignment="Left" Height="458" Margin="10,10,0,0" VerticalAlignment="Top" Width="838">
+                            <Label Content="Stare comanda:"/>
+                            <ComboBox x:Name="stareComandaCBox" Margin="0,0,0.4,0" SelectedIndex="0"/>
+                            <Label Content="Data programare:"/>
+                            <DatePicker x:Name="programareDateBox" />
+                            <Label Content="Data finalizare:"/>
+                            <DatePicker x:Name="finalizareDateBox" />
+                            <Label Content="Km bord:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="kmBordTxtBox"/>
+                            <Label Content="Descriere:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="descriereComandaTxtBox"/>
+                            <Label Content="Valoare piese:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="valoarePieseTxtBox"/>
+                            <Button x:Name="editCommandBtn" Content="Editeaza" Height="49" Margin="0,0,0.4,0" Click="EditCommandBtn_Click"/>
+                            <Button x:Name="saveCommandBtn" Content="Salveaza" Height="51" Margin="0,0,0.4,0" Click="SaveCommandBtn_Click"/>
+                            <Button x:Name="cancelCommandBtn" Content="Anuleaza" Height="46" Margin="0,0,0.4,0" Click="CancelCommandBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="commandOtherInfoGroupBox" HorizontalAlignment="Left" Height="171" Margin="584,493,0,0" VerticalAlignment="Top" Width="879">
+                        <StackPanel HorizontalAlignment="Left" Height="121" Margin="10,10,0,0" VerticalAlignment="Top" Width="839">
+                            <Label Content="Operatiuni:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="operatiuniTxtBox"/>
+                            <Button x:Name="operationsTabBtn" Content="Detalii" Height="49" Margin="0,0,0.4,0" Click="operationsTabBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="OperationsTab" Header="Operatiuni">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="operationsGroupBox" HorizontalAlignment="Left" Height="726" Margin="10,10,0,0" VerticalAlignment="Top" Width="774">
+                        <StackPanel HorizontalAlignment="Left" Height="680" Margin="10,10,0,0" VerticalAlignment="Top" Width="736">
+                            <ListBox x:Name="operatiuniListBox" Height="624" SelectionChanged="OperatiuniListBox_SelectedIndexChanged"/>
+                            <Button x:Name="newOperationBtn" Content="Operatiune noua" Height="53" Click="NewOperationBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="operationDetailsGroupBox" HorizontalAlignment="Left" Height="726" Margin="811,10,0,0" VerticalAlignment="Top" Width="655">
+                        <StackPanel HorizontalAlignment="Left" Height="681" Margin="10,10,0,0" VerticalAlignment="Top" Width="617">
+                            <Label Content="Comanda:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="comandaOperatiuneTxtBox"/>
+                            <Label Content="Denumire:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="numeOperatiuneTxtBox"/>
+                            <Label Content="Timp executie:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="timpExecutieOperatiuneTxtBox"/>
+                            <Label Content="Mecanici:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="mecaniciOperatiuniTxtBox"/>
+                            <Label Content="Materiale:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="materialeOperatiuneTxtBox"/>
+                            <Label Content="Imagini:"/>
+                            <Image x:Name="poza" Height="351" Margin="0,0,-0.4,0"/>
+                            <Button x:Name="operationCommandDeleteBtn" Content="Sterge" Height="61" Margin="0,0,-0.4,0" Click="OperationCommandDeleteBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="EditCommandTab" Header="EditareComanda" Visibility="Visible">
+                <Grid Background="#FFE5E5E5">
+                    <GroupBox x:Name="commandEditMiscGroupBox" HorizontalAlignment="Left" Height="726" Margin="10,10,0,0" VerticalAlignment="Top" Width="734">
+                        <StackPanel HorizontalAlignment="Left" Height="688" Margin="10,10,0,0" VerticalAlignment="Top" Width="694">
+                            <Label Content="Denumire operatiune:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="denumireOperatieTxtBox"/>
+                            <Label Content="Timp executie operatiune:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="timpExecutieOperatieTxtBox"/>
+                            <Label Content="Mecanici:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="comandaEditMecaniciTxtBox"/>
+                            <Label Content="Materiale:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="comandaEditMaterialeTxtBox"/>
+                            <Label Content="Data aprovizionare:"/>
+                            <DatePicker x:Name="aprovizionareDateBox"/>
+                            <Border BorderThickness="1" Height="100"/>
+                            <Label Content="Introduceti imagine noua:"/>
+                            <Label Content="Titlu:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="titluImagineTxtBox"/>
+                            <Label Content="Descriere:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="descriereImagineTxtBox"/>
+                            <Label Content="Data:"/>
+                            <DatePicker x:Name="dataImagineDateBox"/>
+                            <Label Content="Poza:"/>
+                            <TextBox Height="23" TextWrapping="Wrap" x:Name="imagineTxtBox"/>
+                            <Button x:Name="saveOperationBtn" Content="Salveaza" Height="49" Margin="0,0,0.4,0" Click="SaveOperationBtn_Click"/>
+                            <Button x:Name="cancelOperationBtn" Content="Anuleaza" Height="58" Margin="0,0,0.4,0" Click="CancelOperationBtn_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

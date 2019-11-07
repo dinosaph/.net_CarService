@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D93A2E4-3674-46FD-B562-B3B07532418B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarService</RootNamespace>
+    <AssemblyName>CarService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auto.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarServiceModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarServiceModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoUtils.cs" />
+    <Compile Include="Client.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetaliuComanda.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imagine.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mecanic.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operatie.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperatieUtils.cs" />
+    <Compile Include="DetaliuComandaUtils.cs" />
+    <Compile Include="ComandaUtils.cs" />
+    <Compile Include="MaterialUtils.cs" />
+    <Compile Include="Sasiu.cs">
+      <DependentUpon>CarServiceModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SasiuUtils.cs" />
+    <Compile Include="ImagineUtils.cs" />
+    <Compile Include="MecanicUtils.cs" />
+    <Compile Include="ClientUtils.cs" />
+    <Compile Include="CarServiceModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="CarServiceModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CarServiceModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CarServiceModel.edmx.diagram">
+      <DependentUpon>CarServiceModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CarServiceModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CarServiceModel.Context.cs</LastGenOutput>
+      <DependentUpon>CarServiceModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CarServiceModel.edmx.sql" />
+    <Content Include="CarServiceModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CarServiceModel.cs</LastGenOutput>
+      <DependentUpon>CarServiceModel.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

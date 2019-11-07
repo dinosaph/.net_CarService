@@ -1,0 +1,15 @@
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarServiceWCF.Host.exe.config
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarServiceWCF.Host.exe
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarServiceWCF.Host.pdb
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarServiceWCF.Object.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarService.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\EntityFramework.dll
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarServiceWCF.Object.pdb
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarService.pdb
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\CarService.dll.config
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\bin\Debug\EntityFramework.xml
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\obj\Debug\CarServiceWCF.Host.csprojAssemblyReference.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\obj\Debug\CarServiceWCF.Host.csproj.CoreCompileInputs.cache
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\obj\Debug\CarServiceWCF.Host.csproj.CopyComplete
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\obj\Debug\CarServiceWCF.Host.exe
+C:\Users\dinosaph\Documents\dotnet\Projects\CarService\CarServiceWCF.Host\obj\Debug\CarServiceWCF.Host.pdb
